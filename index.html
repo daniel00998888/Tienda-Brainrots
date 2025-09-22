@@ -1,21 +1,118 @@
-<div class="col-md-4 product-card">
-  <div class="card shadow-sm">
-    <div class="card-body">
-      <h5 class="card-title">Brainrot Súper Raro</h5>
-      <p class="card-text">Un brainrot súper raro para destacar en el juego.</p>
-      
-      <!-- Campo para que el comprador deje su usuario de Roblox -->
-      <div class="mb-2">
-        <label for="roblox1" class="form-label">Tu usuario de Roblox:</label>
-        <input type="text" class="form-control" id="roblox1" placeholder="Ej: jugador123" required>
-      </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tienda de Brainrots - Roblox</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  body { background: #f8f9fa; font-family: Arial, sans-serif; }
+  header { background: #343a40; color: white; padding: 20px; text-align: center; }
+  .carousel-caption { background: rgba(0,0,0,0.6); padding: 10px; border-radius: 5px; }
+  .product-card { margin-bottom: 20px; }
+</style>
+</head>
+<body>
 
-      <!-- Botón de PayPal que redirige al link -->
-      <a href="https://www.paypal.com/ncp/payment/3Z6Z4YD6JVPFE" target="_blank" 
-         onclick="if(!document.getElementById('roblox1').value){alert('Ingresa tu usuario de Roblox'); return false;}" 
-         class="btn btn-primary w-100">
-        Comprar con PayPal
-      </a>
+<header>
+  <h1>🛒 Tienda de Brainrots - Roblox</h1>
+  <p>Compra tus brainrots y recíbelos en tu juego</p>
+</header>
+
+<!-- Carrusel de productos destacados -->
+<div id="carouselBrainrots" class="carousel slide container my-4" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="d-flex justify-content-center align-items-center" style="height:300px; background:#6c757d; color:white;">
+        <div class="carousel-caption">
+          <h5>Brainrot Súper Raro</h5>
+          <a href="#producto1" class="btn btn-light btn-sm">Ver producto</a>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="d-flex justify-content-center align-items-center" style="height:300px; background:#495057; color:white;">
+        <div class="carousel-caption">
+          <h5>Brainrot Legendario</h5>
+          <a href="#producto2" class="btn btn-light btn-sm">Ver producto</a>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="d-flex justify-content-center align-items-center" style="height:300px; background:#343a40; color:white;">
+        <div class="carousel-caption">
+          <h5>Brainrot Exclusivo</h5>
+          <a href="#producto3" class="btn btn-light btn-sm">Ver producto</a>
+        </div>
+      </div>
     </div>
   </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselBrainrots" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselBrainrots" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
 </div>
+
+<!-- Sección de productos -->
+<div class="container">
+  <div class="row">
+
+    <!-- Producto 1 -->
+    <div class="col-md-4 product-card" id="producto1">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Brainrot Súper Raro</h5>
+          <p class="card-text">Un brainrot súper raro para destacar en el juego.</p>
+          <div class="mb-2">
+            <label for="roblox1" class="form-label">Tu usuario de Roblox:</label>
+            <input type="text" class="form-control" id="roblox1" placeholder="Ej: jugador123" required>
+          </div>
+          <a href="https://www.paypal.com/ncp/payment/3Z6Z4YD6JVPFE" target="_blank" 
+             onclick="if(!document.getElementById('roblox1').value){alert('Ingresa tu usuario de Roblox'); return false;}" 
+             class="btn btn-primary w-100">Comprar con PayPal</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 2 -->
+    <div class="col-md-4 product-card" id="producto2">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Brainrot Legendario</h5>
+          <p class="card-text">Brainrot legendario, edición limitada.</p>
+          <div class="mb-2">
+            <label for="roblox2" class="form-label">Tu usuario de Roblox:</label>
+            <input type="text" class="form-control" id="roblox2" placeholder="Ej: jugador123" required>
+          </div>
+          <a href="https://www.paypal.com/ncp/payment/3Z6Z4YD6JVPFE" target="_blank" 
+             onclick="if(!document.getElementById('roblox2').value){alert('Ingresa tu usuario de Roblox'); return false;}" 
+             class="btn btn-primary w-100">Comprar con PayPal</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 3 -->
+    <div class="col-md-4 product-card" id="producto3">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Brainrot Exclusivo</h5>
+          <p class="card-text">Brainrot exclusivo para coleccionistas.</p>
+          <div class="mb-2">
+            <label for="roblox3" class="form-label">Tu usuario de Roblox:</label>
+            <input type="text" class="form-control" id="roblox3" placeholder="Ej: jugador123" required>
+          </div>
+          <a href="https://www.paypal.com/ncp/payment/3Z6Z4YD6JVPFE" target="_blank" 
+             onclick="if(!document.getElementById('roblox3').value){alert('Ingresa tu usuario de Roblox'); return false;}" 
+             class="btn btn-primary w-100">Comprar con PayPal</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

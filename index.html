@@ -1,97 +1,21 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tienda de Brainrots - Roblox</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body { background: #f8f9fa; font-family: Arial, sans-serif; }
-    header { background: #343a40; color: white; padding: 20px; text-align: center; }
-    .product-card { margin-bottom: 20px; }
-    .product-card h5 { min-height: 50px; }
-  </style>
-</head>
-<body>
-
-<header>
-  <h1>🛒 Tienda de Brainrots - Roblox</h1>
-  <p>Compra tus brainrots y recíbelos en tu juego</p>
-</header>
-
-<div class="container my-4">
-  <div class="row">
-
-    <!-- Producto 1 -->
-    <div class="col-md-4 product-card">
-      <div class="card shadow-sm">
-        <div class="card-body">
-          <h5 class="card-title">Brainrot Súper Raro</h5>
-          <p class="card-text">Un brainrot súper raro para destacar en el juego.</p>
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-            <!-- Botón de PayPal -->
-            <input type="hidden" name="cmd" value="_xclick">
-            <input type="hidden" name="business" value="TU_EMAIL_DE_PAYPAL@example.com">
-            <input type="hidden" name="item_name" value="Brainrot Súper Raro">
-            <input type="hidden" name="amount" value="5.00">
-            <input type="hidden" name="currency_code" value="USD">
-            <!-- Usuario de Roblox -->
-            <div class="mb-2">
-              <label for="roblox1" class="form-label">Tu usuario de Roblox:</label>
-              <input type="text" class="form-control" name="custom" id="roblox1" placeholder="Ej: jugador123" required>
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Comprar con PayPal</button>
-          </form>
-        </div>
+<div class="col-md-4 product-card">
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <h5 class="card-title">Brainrot Súper Raro</h5>
+      <p class="card-text">Un brainrot súper raro para destacar en el juego.</p>
+      
+      <!-- Campo para que el comprador deje su usuario de Roblox -->
+      <div class="mb-2">
+        <label for="roblox1" class="form-label">Tu usuario de Roblox:</label>
+        <input type="text" class="form-control" id="roblox1" placeholder="Ej: jugador123" required>
       </div>
-    </div>
 
-    <!-- Producto 2 -->
-    <div class="col-md-4 product-card">
-      <div class="card shadow-sm">
-        <div class="card-body">
-          <h5 class="card-title">Brainrot Legendario</h5>
-          <p class="card-text">Brainrot legendario, edición limitada.</p>
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-            <input type="hidden" name="cmd" value="_xclick">
-            <input type="hidden" name="business" value="TU_EMAIL_DE_PAYPAL@example.com">
-            <input type="hidden" name="item_name" value="Brainrot Legendario">
-            <input type="hidden" name="amount" value="10.00">
-            <input type="hidden" name="currency_code" value="USD">
-            <div class="mb-2">
-              <label for="roblox2" class="form-label">Tu usuario de Roblox:</label>
-              <input type="text" class="form-control" name="custom" id="roblox2" placeholder="Ej: jugador123" required>
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Comprar con PayPal</button>
-          </form>
-        </div>
-      </div>
+      <!-- Botón de PayPal que redirige al link -->
+      <a href="https://www.paypal.com/ncp/payment/3Z6Z4YD6JVPFE" target="_blank" 
+         onclick="if(!document.getElementById('roblox1').value){alert('Ingresa tu usuario de Roblox'); return false;}" 
+         class="btn btn-primary w-100">
+        Comprar con PayPal
+      </a>
     </div>
-
-    <!-- Producto 3 -->
-    <div class="col-md-4 product-card">
-      <div class="card shadow-sm">
-        <div class="card-body">
-          <h5 class="card-title">Brainrot Exclusivo</h5>
-          <p class="card-text">Brainrot exclusivo para coleccionistas.</p>
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-            <input type="hidden" name="cmd" value="_xclick">
-            <input type="hidden" name="business" value="oscarmolina07a@gmail.com">
-            <input type="hidden" name="item_name" value="Brainrot Exclusivo">
-            <input type="hidden" name="amount" value="20.00">
-            <input type="hidden" name="currency_code" value="USD">
-            <div class="mb-2">
-              <label for="roblox3" class="form-label">Tu usuario de Roblox:</label>
-              <input type="text" class="form-control" name="custom" id="roblox3" placeholder="Ej: jugador123" required>
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Comprar con PayPal</button>
-          </form>
-        </div>
-      </div>
-    </div>
-
   </div>
 </div>
-
-</body>
-</html>
